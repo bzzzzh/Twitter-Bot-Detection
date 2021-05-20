@@ -1,17 +1,28 @@
-# Twitter_Bot_Detection
-- Bohan Zhang bz771
-- Yuteng Zhang yz7436
+# Twitter Bot Detection
 
-To run the program:
+Team member:
+* Yuteng Zhang
+* Bohan Zhang
+
+## Data preparation
+
+**Step 1:** Given the raw dataset `twitter_human_bots_dataset.csv`, crawl the user object into `result.json` file.
+
+```bash
+python3 data_prep.py
 ```
-$ python3 data_prep.py
+
+**Step 2:** Convert the `result.json` file into `step1.csv`, with adding the labels from `twitter_human_bots_dataset.csv`.
+
+```bash
+is_bot.py
 ```
-This will generate a json file result.json containing all the user information.
-<br />Next, run:
-```
-$ python3 is_bot.py
-```
-<br />This will match the label with the user id in the two dataset, and generate a csv file step1.csv.
-<br />After running these 2 scripts, we are ready for the data preperation.
-<br />botdet.ipynb contains the process of cycle 1 
-<br />NewFeatures.ipynb contains the process of cycle 2
+Now we can finally dig into the `step1.csv` to do further analysis.
+
+## Main section
+The main code for the remaining data preparation and analysis are in the：
+* `botdet.ipynb` for cycle 1
+* `NewFeatures.ipynb` for cycle 2
+
+## License
+[MIT](https://choosealicense.com/licenses/mit/)
