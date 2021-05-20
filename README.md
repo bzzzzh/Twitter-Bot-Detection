@@ -15,7 +15,7 @@ python3 data_prep.py
 **Step 2:** Convert the `result.json` file into `step1.csv`, with adding the labels from `twitter_human_bots_dataset.csv`.
 
 ```bash
-is_bot.py
+python3 is_bot.py
 ```
 Now we can finally dig into the `step1.csv` to do further analysis.
 
